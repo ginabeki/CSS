@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Pseudo-class vs Pseudo-elements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      p {
+        color: cornflowerblue;
+      }
+      /******************
+        Pseudo-Classes-existing element under some condition
+        :hover
+        :active
+        :link
+        :focus
+        :checled
+        :visited
+        :optional
+        :required
+        :valid
+        :invalid
+        :default
+        :disabled
+        :empty
+        :in-range
+        :lang()
+        :not()
+        :out-of-range
+        :root
+        :only-of-type
+        :nth-child()
+        :nth-of-type()
+        :first-child
+        :last-child
+        :first-of-type
+        :last-of-type
+        *************/
+      p:hover {
+        color: rebeccapurple;
+        font-weight: 900;
+      }
+      input:required {
+        /*            border: 2px solid #333;*/
+      }
+      input:optional {
+        margin: 2rem;
+      }
+      input:checked {
+        margin: 4rem;
+      }
+      p:last-of-type {
+        font-size: 2rem;
+      }
+      br:empty {
+        line-height: 4rem;
+      }
+      /*******************
+        Pseudo-Elements - element created 
+        ::after
+        ::before
+        ::first-letter
+        ::first-line
+        ::selection
+        ::cue (WebVTT)
+        ******************/
+      p::selection {
+        background-color: gold;
+        color: red;
+      }
+      p::first-letter {
+        font-size: 3rem;
+      }
+      p::first-line {
+        color: black;
+      }
+      p::after {
+        content: "😀";
+        padding-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Pseudo-Class vs Pseudo-elements</h1>
+    </header>
+    <main>
+      <h2>Sub Heading</h2>
+      <p>
+        <input type="text" required /><br />
+        <input type="checkbox" checked />
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        reprehenderit, nam illum officiis incidunt quae? Natus quibusdam error
+        nihil magnam nobis. Possimus repellat ea necessitatibus rem error,
+        aliquam nesciunt obcaecati?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        distinctio expedita sit quibusdam totam, deserunt cum. Illo perferendis
+        quis at facere voluptas ut culpa nostrum hic nam voluptate, quod earum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        quod, tenetur unde cupiditate molestiae cumque debitis deserunt aliquid
+        adipisci nihil, laboriosam dolores recusandae necessitatibus, tempora
+        voluptate tempore perferendis repudiandae distinctio?
+      </p>
+    </main>
+  </body>
+</html>
