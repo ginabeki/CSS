@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unicode Range</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       @font-face{
+           font-family: 'AMP';
+           src: local('Palatino')
+           /*only the ampersand*/
+           unicode-range:U+26;
+       } 
+       @font-face {
+           font-family: 'UPP';
+           src: local('Raleway-Light');
+           font-weight: light;
+           unicode-range: U+0041-005A;
+           /*Uppercase unicode-range:U+0041-005A;*/
+       }
+       @font-face {
+           font-family: 'LOW';
+           src: local('Raleway-Light');
+           font-weight: light;
+           unicode-range:U+0061-007A;
+           /*lowercase unicode-range:U+0061-007A*/
+       }
+       p:nth-of-type(1){
+           font-size: 3rem;
+           font-family: Upp, Helvetica, Arial, sans-serif;
+       }
+       p:nth-of-type(2){
+           font-size: 3rem;
+           font-family: AMP, LOW, Helvetica, Arial, sans-serif;
+       }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unicode Range</h1>
+    </header>
+    <main>
+        <p>Apples&amp; Oranges</p>
+         <p>Apples&amp; Oranges</p>
+    </main>
+</body>
+</html>
