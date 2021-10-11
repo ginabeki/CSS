@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS @font-face</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      /* use @font-face before your other CSS */
+      @font-face {
+        font-family: "Unchanged Thoughts";
+        src: local("Unchanged"), local("Unchanged-Regular"),
+          url("./fonts/unchanged-webfont.woff2") format("woff2"),
+          url("./fonts/unchanged-webfont.woff") format("woff"),
+          url("./fonts/unchanged.ttf") format("truetype");
+      }
+
+      /********************************
+        Font Format Support
+        WOFF - all browsers
+        EOT - ONLY IE 11 and earlier
+        SVG - Safari and iOS only
+        TTF / OTF - all browsers (IE 11+)
+        WOFF2 - NOT IE, Safari on iOS and OSX Sierra+, 
+                all other browsers yes since 2014/15/16
+        ********************************/
+    </style>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      header > h1 {
+        font-family: "Unchanged Thoughts", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS @font-face</h1>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos vero
+        nobis, numquam cumque veritatis aspernatur voluptatum necessitatibus
+        sunt, quis voluptates, odio inventore architecto. Blanditiis nulla
+        alias, necessitatibus nesciunt qui, quisquam!
+      </p>
+      <p>
+        Veritatis voluptate illum molestiae aperiam beatae dolores possimus,
+        magni debitis, quos harum nobis ad incidunt unde officiis provident, quo
+        recusandae quia velit. Tempore nesciunt eum numquam ea quaerat
+        cupiditate molestiae?
+      </p>
+      <p>
+        Eligendi minus reprehenderit, quidem rem omnis. Quam architecto tempora
+        deserunt sint officia nisi, ad quaerat commodi numquam et ea, aliquid,
+        aut ratione possimus facere vel. Commodi pariatur ut, dolore nemo.
+      </p>
+    </main>
+  </body>
+</html>
