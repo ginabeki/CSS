@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS ::before and ::after</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      main p:nth-child(1)::before {
+        content: "HELLO";
+        padding-right: 1rem;
+      }
+      main p:nth-child(1):hover::before {
+        color: red;
+        font-weight: 900;
+      }
+      main p + p {
+        color: gold;
+      }
+      main p::after {
+        content: attr(data-time);
+        display: block;
+        color: olive;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS ::before and ::after</h1>
+      <h2>Pseudo-Elements</h2>
+    </header>
+    <main>
+      <p data-time="updated on August 26, 2018">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sed,
+        maxime blanditiis officiis animi consequatur excepturi, aliquid quis
+        quas modi dolor omnis illo mollitia alias doloribus dolores dolorem
+        laudantium minus.
+      </p>
+      <p data-time="updated on August 31, 2018">
+        Et atque, porro consequuntur debitis quibusdam! Perferendis illum
+        dolorem maxime, ab libero dignissimos perspiciatis inventore omnis
+        dolores, necessitatibus doloremque, non, voluptatum sequi fugit
+        voluptates architecto autem eum nobis! Ratione, voluptatum.
+      </p>
+    </main>
+  </body>
+</html>
